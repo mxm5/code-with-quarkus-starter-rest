@@ -12,7 +12,7 @@ import java.util.List;
 public class FilmEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    @Column(name = "film_id", nullable = false)
+    @Column(name = "film_id", nullable = false ,insertable=false, updatable=false)
     private Short filmId;
     @Basic
     @Column(name = "title", nullable = false, length = 255)

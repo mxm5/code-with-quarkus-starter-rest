@@ -11,7 +11,7 @@ import java.util.Set;
 public class ActorEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    @Column(name = "actor_id", nullable = false)
+    @Column(name = "actor_id", nullable = false ,insertable=false, updatable=false)
     private Short actorId;
     @Basic
     @Column(name = "first_name", nullable = false, length = 45)
