@@ -23,8 +23,8 @@ public class ActorEntity {
     @Column(name = "last_update", nullable = false)
     private Timestamp lastUpdate;
 
-//    @ManyToMany(mappedBy = "actors")
-//    Set<FilmEntity> films = new HashSet<>();
+    @ManyToMany(mappedBy = "actors")
+    Set<FilmEntity> films = new HashSet<>();
 
     public Short getActorId() {
         return actorId;

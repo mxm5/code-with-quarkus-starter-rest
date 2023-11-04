@@ -51,15 +51,15 @@ public class FilmEntity {
     @Column(name = "last_update", nullable = false)
     private Timestamp lastUpdate;
 
-//
-//    @JoinTable(
-//            name = "film_actor",
-//            joinColumns = {@JoinColumn(name = "film_id")},
-//            inverseJoinColumns = {@JoinColumn(name = "film_id")}
-//    )
-//    @ManyToMany
-//    private List<ActorEntity> actors = new ArrayList<>();
-//
+
+    @JoinTable(
+            name = "film_actor",
+            joinColumns = {@JoinColumn(name = "film_id")},
+            inverseJoinColumns = {@JoinColumn(name = "film_id")}
+    )
+    @ManyToMany
+    private List<ActorEntity> actors = new ArrayList<>();
+
 
     public Short getFilmId() {
         return filmId;
