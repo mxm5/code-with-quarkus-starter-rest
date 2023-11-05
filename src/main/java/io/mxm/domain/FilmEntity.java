@@ -21,7 +21,7 @@ public class FilmEntity {
     @Column(name = "description", nullable = true, length = -1)
     private String description;
     @Basic
-    @Column(name = "release_year", nullable = true)
+    @Column(name = "release_year", nullable = true,columnDefinition = "year")
     private Object releaseYear;
     @Basic
     @Column(name = "language_id", nullable = false)
@@ -55,7 +55,7 @@ public class FilmEntity {
     @JoinTable(
             name = "film_actor",
             joinColumns = {@JoinColumn(name = "film_id")},
-            inverseJoinColumns = {@JoinColumn(name = "film_id")}
+            inverseJoinColumns = {@JoinColumn(name = "actor_id")}
     )
     @ManyToMany
     private List<ActorEntity> actors = new ArrayList<>();
