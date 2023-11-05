@@ -21,7 +21,7 @@ public class FilmEntity {
     @Column(name = "description", nullable = true, length = -1)
     private String description;
     @Basic
-    @Column(name = "release_year", nullable = true,columnDefinition = "year")
+    @Column(name = "release_year", nullable = true,columnDefinition = "ye   ar")
     private Object releaseYear;
     @Basic
     @Column(name = "language_id", nullable = false)
